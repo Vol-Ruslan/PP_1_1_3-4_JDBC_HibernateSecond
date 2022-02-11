@@ -31,7 +31,6 @@ public class UserServiceImpl implements UserService {
                 statement.executeUpdate(SQLSecond);
             }
         } catch (SQLException e) {
-            System.out.println("Ошибка в создании таблицы");
             e.printStackTrace();
         }
     }
@@ -110,7 +109,6 @@ public class UserServiceImpl implements UserService {
                 users.add(user);
             }
         } catch (SQLException e) {
-            System.out.println("Ошибка в получении алл");
             e.printStackTrace();
         }
         return users;
@@ -122,7 +120,6 @@ public class UserServiceImpl implements UserService {
             statement.executeUpdate(SQL);
             ID = 1;
         } catch (SQLException e) {
-            System.out.println("Ошибка в очистке");
             e.printStackTrace();
         }
     }
