@@ -1,5 +1,6 @@
 package jm.task.core.jdbc;
 
+import jm.task.core.jdbc.dao.UserDaoHibernateImpl;
 import jm.task.core.jdbc.model.User;
 import jm.task.core.jdbc.service.UserServiceImpl;
 import jm.task.core.jdbc.util.Util;
@@ -14,7 +15,9 @@ public class Main {
         UserServiceImpl userService = new UserServiceImpl();
 
 //        userService.createUsersTable();
-        userService.dropUsersTable();
+        UserDaoHibernateImpl userDaoHibernate = new UserDaoHibernateImpl();
+        userDaoHibernate.saveUser("Kira", "Natalee", (byte) 32);
+
 
 //        userService.saveUser("Vasya", "Volkov", (byte) 21);
 //        userService.saveUser("Kirill", "Pozov", (byte) 45);
